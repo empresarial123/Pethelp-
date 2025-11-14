@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados - PetHelp</title>
+    <link rel="stylesheet" href="estilo.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .results-list {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: left;
+        }
+        .card h3 {
+            margin-top: 0;
+        }
+        .card .distance {
+            margin-bottom: 15px;
+        }
+        .details-button {
+            display: inline-block;
+            background-color: #50E3C2;
+            color: #2c3e50;
+            padding: 10px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+        }
+        .page-header {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <h2>Encontramos 3 opções perto de você!</h2>
+        </header>
+
+        <main class="results-list">
+            <!-- Card 1 -->
+            <div class="card">
+                <h3>🏥 Hospital Veterinário 24h</h3>
+                <p class="distance">Aproximadamente <strong>5 minutos</strong> de você</p>
+                <!-- CORREÇÃO AQUI -->
+                <a href="pagamento.html" class="details-button">Ver Detalhes e Rota (R$ 3,99)</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <h3>🏪 Clínica Veterinária de Emergência</h3>
+                <p class="distance">Aproximadamente <strong>8 minutos</strong> de você</p>
+                <!-- CORREÇÃO AQUI -->
+                <a href="pagamento.html" class="details-button">Ver Detalhes e Rota (R$ 3,99)</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <h3>🐾 Clínica Veterinária</h3>
+                <p class="distance">Aproximadamente <strong>12 minutos</strong> de você</p>
+                <!-- CORREÇÃO AQUI -->
+                <a href="pagamento.html" class="details-button">Ver Detalhes e Rota (R$ 3,99)</a>
+            </div>
+        </main>
+
+        <footer class="footer-text">
+            <p>Escolha uma opção para prosseguir com o pagamento e liberar o endereço.</p>
+        </footer>
+    </div>
+</body>
+</html>

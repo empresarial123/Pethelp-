@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento - PetHelp</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .payment-box {
+            background-color: white;
+            color: #2c3e50;
+            padding: 30px;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 350px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .payment-box h2 {
+            margin-top: 0;
+        }
+        .pix-copy-button {
+            display: block;
+            width: 100%;
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 20px; /* Adicionado espaço no topo */
+        }
+        .pix-copy-button:active {
+            background-color: #2980b9;
+        }
+        .payment-footer {
+            font-size: 0.8em;
+            color: #7f8c8d;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="payment-box">
+            <h2>Falta pouco para salvar seu pet!</h2>
+            <p>Pague a taxa de <strong>R$ 3,99</strong> via PIX para liberar o acesso imediato.</p>
+            
+            <!-- A IMAGEM DO QR CODE FOI REMOVIDA DAQUI -->
+            
+            <a href="acesso-total.html" class="pix-copy-button" onclick="copiarPix(event)">PIX Copia e Cola</a>
+
+            <p class="payment-footer">
+                Pagamento para Girley A. L. (Itaú).<br>
+                Após o pagamento, o acesso será liberado automaticamente.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function copiarPix(event) {
+            event.preventDefault(); 
+
+            const pixCode = "00020126580014br.gov.bcb.pix0136123e4567-e89b-12d3-a456-4266141740005204000053039865802BR5913Girley A L6009SAO PAULO62070503***6304E2A4";
+
+            navigator.clipboard.writeText(pixCode).then(function() {
+                alert("Código PIX copiado com sucesso! Redirecionando...");
+                window.location.href = "acesso-total.html";
+            }, function(err) {
+                alert("Erro ao copiar o código PIX. Tente novamente.");
+            });
+        }
+    </script>
+</body>
+</html>
